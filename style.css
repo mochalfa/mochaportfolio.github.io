@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200, 300, 400, 500, 600, 700, 800, 900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px;
+}
+
+/* bagian untuk membuat banner atau seperti jumbotron */
+.banner {
+  position: relative;
+  min-height: 100vh;
+  background: url(images/darksmoke.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner h2 {
+  font-size: 3em;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.banner h2 span {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.banner h3 {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* bagian untuk membuat nav atau header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* bagian untuk membuat about */
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.heading h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentBx {
+  padding-right: 30px;
+}
+
+.contentBx h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.w50 {
+  min-width: 50%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* bagian untuk our services */
+.services {
+  background: #111;
+}
+
+.heading.white {
+  color: #fff;
+}
+
+.services .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.services .content .servicesBx {
+  padding: 40px 20px;
+  background: #222;
+  color: #fff;
+  max-width: 340px;
+  margin: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.services .content .servicesBx:hover {
+  background: #2196f3;
+}
+
+.services .content .servicesBx img {
+  max-width: 80px;
+  filter: invert(1);
+}
+
+.services .content .servicesBx h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.changecard {
+  background: red;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  /* width: 200%; */
+  width: 400px;
+  height: 400px;
+}
+.card__img {
+  width: auto;
+  height: auto;
+  padding: 3rem 0;
+  transition: 0.5s;
+}
+.card__name {
+  position: absolute;
+  /* left: -25%; */
+  top: -12%;
+  /* top: 0; */
+  /* width: 3.5rem; */
+  /* height: 100%; */
+  /* writing-mode: vertical-rl; */
+  /* transform: rotate(180deg); */
+  text-align: center;
+  /* background-color: var(--dark-color); */
+  color: #fff;
+  font-weight: bold;
+  transition: 1s;
+}
+.card__isi {
+  position: absolute;
+  bottom: -30%;
+  text-align: center;
+  transition: 1s;
+}
+/*Move left*/
+.card:hover {
+  box-shadow: 0 0.5rem 1rem #d1d9e6;
+}
+.card:hover .card__name {
+  /* left: 0; */
+  top: 10%;
+}
+.card:hover .card__img {
+  transform: rotate(360deg);
+  /* margin-left: 3.5rem; */
+  transition: 1s;
+}
+.card:hover .card__isi {
+  /* margin-left: 3.5rem; */
+  /* padding: 0 1.5rem; */
+  bottom: 5%;
+  /* height: auto; */
+}
+
+/* bagian untuk contact */
+.contact {
+  background: #111;
+}
+
+.formBx {
+  min-width: 60%;
+}
+
+.formBx form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+  resize: none;
+}
+
+.formBx form textarea {
+  min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder {
+  color: #999;
+}
+
+.formBx form input[type="submit"] {
+  max-width: 100px;
+  background: #2196f3;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contactInfo {
+  min-width: 40%;
+}
+
+.contactInfoBx {
+  position: relative;
+}
+
+.contactInfoBx .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.contactInfoBx .box .icon {
+  min-width: 40px;
+  padding-top: 4px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
+}
+
+.contactInfoBx .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.contactInfoBx .box .text h3 {
+  font-weight: 500;
+  color: #2196f3;
+  margin-bottom: 0;
+}
+
+/* bagian untuk footer */
+.copyright {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
